@@ -12,6 +12,7 @@
 		E39072D826E8536500674CCE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39072D726E8536500674CCE /* Scene.swift */; };
 		E39072DA26E8575400674CCE /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39072D926E8575400674CCE /* SceneCoordinatorType.swift */; };
 		E39072DC26E858E700674CCE /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39072DB26E858E700674CCE /* SceneCoordinator.swift */; };
+		E39072DE26E86D3900674CCE /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39072DD26E86D3900674CCE /* CommonViewModel.swift */; };
 		E398E46D26E703190036B57D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E46C26E703190036B57D /* AppDelegate.swift */; };
 		E398E46F26E703190036B57D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398E46E26E703190036B57D /* SceneDelegate.swift */; };
 		E398E47426E703190036B57D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E398E47226E703190036B57D /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		E39072D726E8536500674CCE /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		E39072D926E8575400674CCE /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		E39072DB26E858E700674CCE /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		E39072DD26E86D3900674CCE /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		E398E46926E703190036B57D /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E398E46C26E703190036B57D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E398E46E26E703190036B57D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				E398E49626E743050036B57D /* MemoListViewModel.swift */,
 				E398E49826E743550036B57D /* MemoDetailViewModel.swift */,
 				E398E49A26E7439B0036B57D /* MemoComposeViewModel.swift */,
+				E39072DD26E86D3900674CCE /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				E39072DA26E8575400674CCE /* SceneCoordinatorType.swift in Sources */,
 				E398E49726E743050036B57D /* MemoListViewModel.swift in Sources */,
 				E398E49926E743550036B57D /* MemoDetailViewModel.swift in Sources */,
+				E39072DE26E86D3900674CCE /* CommonViewModel.swift in Sources */,
 				E39072D626E8526400674CCE /* TransitionModel.swift in Sources */,
 				E398E49126E741D70036B57D /* MemoListViewController.swift in Sources */,
 				E398E49526E7425D0036B57D /* MemoComposeViewController.swift in Sources */,
