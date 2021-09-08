@@ -30,11 +30,39 @@
                     <view key="view" contentMode="scaleToFill" id="5js-jQ-nDX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Glo-F0-h0b">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="vvU-hu-DKu">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vvU-hu-DKu" id="cOl-33-SPr">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7Dt-rF-GT3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Glo-F0-h0b" firstAttribute="leading" secondItem="7Dt-rF-GT3" secondAttribute="leading" id="Kbl-dV-nnd"/>
+                            <constraint firstItem="7Dt-rF-GT3" firstAttribute="bottom" secondItem="Glo-F0-h0b" secondAttribute="bottom" id="TpX-wE-QPg"/>
+                            <constraint firstItem="Glo-F0-h0b" firstAttribute="top" secondItem="7Dt-rF-GT3" secondAttribute="top" id="Xz2-1T-4ZG"/>
+                            <constraint firstItem="7Dt-rF-GT3" firstAttribute="trailing" secondItem="Glo-F0-h0b" secondAttribute="trailing" id="o8m-kA-HaK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 목록" id="J1P-5M-Hyj"/>
+                    <navigationItem key="navigationItem" title="메모 목록" id="J1P-5M-Hyj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Icq-gI-AzP"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addButton" destination="Icq-gI-AzP" id="6ZD-Zc-upT"/>
+                        <outlet property="listTableView" destination="Glo-F0-h0b" id="K8r-d7-qtJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x33-Wg-DIK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
