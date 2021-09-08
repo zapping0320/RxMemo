@@ -75,11 +75,34 @@
                     <view key="view" contentMode="scaleToFill" id="S3X-Ys-J2F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-E1-Qk9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="O5C-uA-bXl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q1x-E1-Qk9" firstAttribute="top" secondItem="O5C-uA-bXl" secondAttribute="top" id="2a2-mG-CcF"/>
+                            <constraint firstItem="O5C-uA-bXl" firstAttribute="trailing" secondItem="q1x-E1-Qk9" secondAttribute="trailing" id="adh-Mg-3AJ"/>
+                            <constraint firstItem="O5C-uA-bXl" firstAttribute="bottom" secondItem="q1x-E1-Qk9" secondAttribute="bottom" id="fHD-i1-ifL"/>
+                            <constraint firstItem="q1x-E1-Qk9" firstAttribute="leading" secondItem="O5C-uA-bXl" secondAttribute="leading" id="lt9-eD-Z97"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="새 메모" id="ZUu-hi-MJB"/>
+                    <navigationItem key="navigationItem" title="새 메모" id="ZUu-hi-MJB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VSK-rE-B9N"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="34C-iI-7bt"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="VSK-rE-B9N" id="z2Z-rA-G7K"/>
+                        <outlet property="contentTextView" destination="q1x-E1-Qk9" id="fgu-aN-1wr"/>
+                        <outlet property="saveButton" destination="34C-iI-7bt" id="KB0-Ji-3fu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4S-SG-Bnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,6 +163,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
