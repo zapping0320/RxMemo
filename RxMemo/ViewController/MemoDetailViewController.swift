@@ -25,6 +25,27 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     }
     
     func bindViewModel() {
+        viewModel.title
+            .drive(navigationItem.rx.title)
+            .disposed(by: rx.disposeBag)
+        
+        viewModel.contents
+            .bind(to: listTableView.rx.items) { tableview, row, value in
+                switch row {
+                case 0:
+                    let cell = tableview.dequeueReusableCell(withIdentifier: "contentCell")!
+                    cell.textLabel?.text = value
+                    return cell
+                case 1:
+                    let cell = tableview.dequeueReusableCell(withIdentifier: "dateCell")!
+                    cell.textLabel?.text = value
+                    return cell
+                default:
+                    fatalError()
+                }
+                
+            }
+            .disposed(by: rx.disposeBag)
         
     }
 
