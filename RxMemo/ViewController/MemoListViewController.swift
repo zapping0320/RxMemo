@@ -41,5 +41,15 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .map { $0.0 }
             .bind(to: viewModel.detailAction.inputs)
             .disposed(by: rx.disposeBag)
+        
+        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
+        
+        viewModel.title
+            .drive(backButton.rx.title)
+            .disposed(by: rx.disposeBag)
+        
+        backButton.rx.action = viewModel.popAction
+        navigationItem.backBarButtonItem  = backButton
+        
     }
 }
